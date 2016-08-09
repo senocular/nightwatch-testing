@@ -1,0 +1,32 @@
+20:46:05.892 INFO - Launching a standalone Selenium Server
+Setting system property webdriver.chrome.driver to ../../lib/chromedriver
+Setting system property webdriver.ie.driver to ../../lib/IEDriverServer_x64_2.52.2.exe
+Setting system property webdriver.safari.driver to ../../lib/SafariDriver.safariextz
+Setting system property trustAllSSLCertificates to true
+20:46:05.919 INFO - Java: Oracle Corporation 25.92-b14
+20:46:05.920 INFO - OS: Mac OS X 10.11.5 x86_64
+20:46:05.926 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+20:46:05.975 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+20:46:05.976 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+20:46:05.976 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+20:46:05.976 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+20:46:06.028 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+20:46:06.028 INFO - Selenium Server is up and running
+20:46:06.250 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+20:46:06.257 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+20:46:06.308 INFO - Server started on port 9528
+20:46:06.315 INFO - Launching Safari
+20:46:06.322 INFO - Waiting for SafariDriver to connect
+20:46:07.233 INFO - Connection opened
+20:46:07.234 INFO - Driver connected in 911 ms
+20:46:07.274 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+20:46:07.296 INFO - Executing: [delete session: 969a0517-b1a9-4eed-930b-650328b9232c])
+20:46:07.296 INFO - Shutting down
+20:46:07.296 INFO - Closing connection
+20:46:07.297 INFO - Stopping Safari
+20:46:07.350 INFO - Stopping server
+20:46:07.350 INFO - Stopping server
+20:46:07.354 INFO - Shutdown complete
+20:46:07.354 INFO - Done: [delete session: 969a0517-b1a9-4eed-930b-650328b9232c]

@@ -1,0 +1,269 @@
+== Master Results ==
+
+(?) Implicit browser.end()/selenium shutdown on failure? Is there some sort of quit process hook (like w/ ctrl+c)?
+- if before() is successfully run, after() should be attempted when there's an error (global after already does this)
+
+---
+
+ClientManager.prototype.handleException
+  from Nightwatch.prototype.handleException
+    from TestCase.prototype.setFailed
+
+
+TestSuite
+    on(error)
+        self.deferred.reject(err);
+
+queue
+    thrown command error: emit('error', err)
+
+Nightwatch.prototype.start
+    this.queue.run(function(error) { ... }
+        Utils.showStackTraceWithHeadline
+
+ErrorHandler.logError(err)
+    from clirunner
+
+bin/runner.js (global before throw)
+
+deferred:
+    CliRunner#stopSelenium
+    Runner#run
+    TestSuite.constructor:
+        this.deferred
+    TestSuite#runNextTestCase
+    TestSuite#makePromise
+    ClientManager#checkQueue
+    TestCase#run:
+        this.currentDeferred
+        this._deferredNext
+---
+
+global-before:
+    called: CliRunner#startSelenium
+
+    timeouts:
+        - exits (existing timers may prolong the process before exit)
+        - exit=0
+        handler: uncaught, process ends when main stack resolves and no timers exist
+
+    sync throws:
+        - output
+            "There was an error while starting the test runner:" (red)
+            "Error: <thrown message>" (gray)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - exit=2
+        handler: bin/runner.js@catch
+
+    async throws:
+        - exits
+        - exit=0
+        handler: run.js:processListener@process.on('uncaughtException', ...) // but ignored
+
+global-beforeEach:
+    called: 
+        TestSuite#run
+        TestSuite#retryTestSuiteModule
+
+    timeouts:
+        - hangs indefinitely
+        handler: unresolved promise from: TestSuite#adaptGlobalHook
+
+    sync throws:
+        - global after()
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+        handler:
+            TestSuite#run@Promise.catch() -> promise from: TestSuite#makePromise()
+              from: Runner#runTestModule
+              from: Runner#run
+              from: CliRunner#runner
+              from: CliRunner#runTests
+              to:   CliRunner#runTests@self.runner~callback (called in Runner#run@catch as this.doneCb)
+              to:   CliRunner#runGlobalAfter().then()
+              to:   ErrorHandler.handle
+
+    async throws:
+        - global after()
+        - output:
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+        handler:
+            run.js:processListener@process.onUncaughtException
+              to:   CliRunner#runTests@self.runner~callback (called in processListener@process.onUncaughtException as finishCallback)
+              to:   CliRunner#runGlobalAfter().then()
+              to:   ErrorHandler.handle
+
+before:
+    timeouts:
+        - immediately runs next suite (no other suite hooks)
+        - reporter logs TEST FAILURE: 0 assertions failed... "✖ <suite-name>" listed with error.message
+            "done() callback timeout of ..." (red, no stack)
+        - SKIPPED lists all suite testcases
+        - global after()
+        - exit=passes ? 0 : 1 (timeout failure does not affect passes)
+    sync throws:
+        - global after()
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+    async throws:
+        - global after()
+        - output:
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+
+beforeEach:
+    timeouts:
+        - immediately runs next suite (no other suite hooks)
+        - reporter logs TEST FAILURE: 0 assertions failed... "✖ <suite-name>" listed with error.message
+            "done() callback timeout of ..." (red, no stack)
+        - SKIPPED lists remaining suite testcases
+        - global after()
+        - exit=passes ? 0 : 1 (timeout failure does not affect passes)
+    sync throws:
+        - global after()
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+    async throws:
+        - outputs
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - beforeEach timeout handler
+        - runs next suite (no other suite hooks)
+        - reporter logs TEST FAILURE: 0 assertions failed... "✖ <suite-name>" listed with error.message
+            "done() callback timeout of ..." (red, no stack)
+        - SKIPPED lists remaining suite testcases
+        - global after()
+        - exit=passes ? 0 : 1 (timeout failure does not affect passes)
+
+afterEach:
+    timeouts:
+        - global after()
+        - output
+            "Error: done() callback timeout of ..." (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - run ends (next suite does not run)
+        - exit=1
+    sync throws:
+        - global after()
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+    async throws:
+        - outputs
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - hangs indefinitely
+
+after:
+    timeouts:
+        - immediately runs next suite (no other suite hooks)
+        - reporter logs TEST FAILURE: 0 assertions failed... "✖ <suite-name>" listed with error.message
+            "done() callback timeout of ..." (red, no stack)
+        - global after()
+        - exit=passes ? 0 : 1 (timeout failure does not affect passes)
+    sync throws:
+        - global after()
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+    async throws:
+        - outputs
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - after timeout handler
+        - runs next suite
+        - reporter logs TEST FAILURE: 0 assertions failed... "✖ <suite-name>" listed with error.message
+            "done() callback timeout of ..." (red, no stack)
+        - global after()
+        - exit=passes ? 0 : 1 (timeout failure does not affect passes)
+
+global-afterEach:
+    timeouts:
+        - hangs indefinitely
+        handler: unresolved promise from: TestSuite#adaptGlobalHook
+
+    sync throws:
+        - global after()
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+    async throws:
+        - outputs
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - hangs indefinitely
+
+global-after:
+    timeouts:
+        - exits (existing timers may prolong the process before exit)
+        - exit=passes ? 0 : 1
+    sync throws:
+        - output
+            "Error: <thrown message>" (red)
+            "    at ..." (white)
+            "    at ..." (white)
+        - exit=1
+    async throws:
+        - output
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - exit=0
+
+---
+
+async throws + done():
+    before test suites run:
+        - ignored
+    in test suite:
+        - outputs (at time of throw)
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - test hooks continue for this test case (no matter when error occurs?)
+        - remaining test cases skipped
+        - after(), global afterEach()
+        - runs next suite
+        - reporter logs TEST FAILURE: 1 error during execution,  0 assertions failed... "✖ <suite-name>"
+        - SKIPPED lists remaining suite testcases of suite running during failure
+        - outputs
+            "Error while running [<testsuite> / <testcase>]:" (red)
+            "Error: <thrown message>" (gray)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - exit=1
+    after test suite:
+        - outputs (at time of throw)
+            "✖ Error: <thrown message>" (red)
+            "    at ..." (gray)
+            "    at ..." (gray)
+        - global after()
+        - exit=passes ? 0 : 1 (error does not affect passes)
+
+    + other possible error cases depending on throw timing (i.e. done() & throw in same call stack)

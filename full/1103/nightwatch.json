@@ -1,0 +1,78 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "custom_commands",
+  "custom_assertions_path" : "custom_asserts",
+  "page_objects_path" : "page_objects",
+  "globals_path" : "global.js",
+
+  "selenium": {
+      "start_process": true,
+      "server_path": "../../lib/selenium-server-standalone-2.52.0.jar",
+      "log_path": "",
+      "host": "127.0.0.1",
+      "port": 4444,
+      "cli_args": {
+          "webdriver.chrome.driver": "../../lib/chromedriver",
+          "webdriver.ie.driver": "../../lib/IEDriverServer_x64_2.52.2.exe",
+          "webdriver.safari.driver": "../../lib/SafariDriver.safariextz",
+          "trustAllSSLCertificates": true
+      }
+  },
+
+  "test_workers": {
+      "enabled": false,
+      "workers": "auto"
+  },
+
+  "test_settings" : {
+
+    "default": {
+      "desiredCapabilities": {
+          "browserName": "safari",
+          "javascriptEnabled": true,
+          "acceptSslCerts": true,
+          "unexpectedAlertBehaviour": "dismiss",
+          "safari.options": {
+              "useCleanSession": true,
+              "ensureCleanSession": true
+          },
+          "cleanSession": "true",
+          "ensureCleanSession": true
+      },
+      "selenium": {
+          "start_process": true
+      },
+
+      "globals" : {},
+      "persist_globals": false
+    },
+
+    "workers": {
+      "desiredCapabilities": {
+          "browserName": "safari",
+          "javascriptEnabled": true,
+          "acceptSslCerts": true,
+          "unexpectedAlertBehaviour": "dismiss",
+          "safari.options": {
+              "useCleanSession": true,
+              "ensureCleanSession": true
+          },
+          "cleanSession": "true",
+          "ensureCleanSession": true
+      },
+      "selenium": {
+          "start_process": true
+      },
+
+      "globals" : {},
+      "persist_globals": false,
+
+      "test_workers": {
+          "enabled": true,
+          "workers": "auto"
+      }
+    }
+    
+  }
+}
