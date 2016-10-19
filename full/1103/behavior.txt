@@ -101,6 +101,14 @@ global-beforeEach:
               to:   ErrorHandler.handle
 
 before:
+    called:
+    at Object.module.exports.before
+    at TestSuite.runHookMethod
+    at TestSuite.makePromise
+    at Object.before
+    at TestSuite.before
+    at TestSuite.runTestSuiteModule
+
     timeouts:
         - immediately runs next suite (no other suite hooks)
         - reporter logs TEST FAILURE: 0 assertions failed... "✖ <suite-name>" listed with error.message

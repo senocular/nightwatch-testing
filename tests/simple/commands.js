@@ -1,16 +1,23 @@
 
 module.exports = {
-  '@disabled': true,
 
-  'commands': !function (browser) {
+  'commands': function (browser) {
+
+
+    //browser.element('xpath','dfsdsd', console.log.bind(console))
+
     // console.log('START TEST');
     // browser.perform(function(){
     //     console.log('START TEST CALLBACK');
     // });
 
-    browser.testClass();
+    // browser.testClass()
+    // .perform(function(){
+    //   console.log('after testClass');
+    // })
+
     //browser.testClassNoEmit();
-    //browser.testFunction();
+    browser.testFunction();
 
     // browser.perform(function(){
     //     console.log('END TEST CALLBACK');
@@ -20,7 +27,7 @@ module.exports = {
     browser.end();
   },
 
-  'page objects': function (browser) {
+  'page objects': !function (browser) {
     var page = browser.page.simplePage();
     var pageReturn = page.useTestCommands();
 

@@ -6,11 +6,13 @@ module.exports = {
 
     'ok2': function (browser) {
         browser.assert.ok(1);
+        browser.expect.element('foo').to.be.visible;
     },
 
 
 
     before: function (browser, done) {
+        console.log('BEFORE STACK', new Error().stack)
         browser.globals.errorTesting.runHook('suite', 'before', done);
     },
     beforeEach: function (browser, done) {

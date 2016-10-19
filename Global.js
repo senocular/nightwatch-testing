@@ -1,24 +1,30 @@
-var capture = {
-  value_id: 'bbq-Global.js',
-};
-
 module.exports = {
 
   asyncHookTimeout: 2000,
 
-  // before: function (done) {
-  //     console.log('GLOBAL BEFORE');
-  //     this.foo = 'bar';
-  //     done();
-  // },
-  // beforeEach: function (done) {
-  //     console.log('GLOBAL BEFOREEACH');
-  //     //this.foo = 'bar';
-  //     done();
-  // },
+//   before: function (browser, done) {
+//       console.log('GLOBAL BEFORE', arguments.length);
+//       this.foo = 'bar';
+//       (done || browser)();
+//   },
+//   beforeEach: function (browser, done) {
+//       global._browser = browser;
+      
+//       console.log('GLOBAL BEFOREEACH', arguments.length);
+//       //this.foo = 'bar';
+//       (done || browser)();
+//   },
+//   after: function (browser, done) {
+//       console.log('GLOBAL AFTER', arguments.length);
+//       this.foo = 'bar';
+//       (done || browser)();
+//   },
+//   afterEach: function (browser, done) {
+//       console.log('GLOBAL AFTEREACH', arguments.length);
+//       //this.foo = 'bar';
+//       (done || browser)();
+//   },
 
-
-  capture: capture,
   'default': {
     value: 'hi-default'
   },

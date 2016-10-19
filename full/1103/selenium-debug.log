@@ -1,16 +1,48 @@
-10:31:40.427 INFO - Launching a standalone Selenium Server
+11:58:55.783 INFO - Launching a standalone Selenium Server
 Setting system property webdriver.chrome.driver to ../../lib/chromedriver
 Setting system property webdriver.ie.driver to ../../lib/IEDriverServer_x64_2.52.2.exe
 Setting system property webdriver.safari.driver to ../../lib/SafariDriver.safariextz
 Setting system property trustAllSSLCertificates to true
-10:31:40.456 INFO - Java: Oracle Corporation 25.92-b14
-10:31:40.456 INFO - OS: Mac OS X 10.11.5 x86_64
-10:31:40.463 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
-10:31:40.514 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+11:58:55.843 INFO - Java: Oracle Corporation 25.92-b14
+11:58:55.844 INFO - OS: Mac OS X 10.11.5 x86_64
+11:58:55.858 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+11:58:55.939 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
 registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
-10:31:40.514 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+11:58:55.940 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
 registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
-10:31:40.514 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-10:31:40.514 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-10:31:40.571 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-10:31:40.572 INFO - Selenium Server is up and running
+11:58:55.940 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+11:58:55.940 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+11:58:56.061 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+11:58:56.061 INFO - Selenium Server is up and running
+11:58:56.401 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Err, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+11:58:56.414 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Err, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+11:58:56.502 INFO - Server started on port 36095
+11:58:56.516 INFO - Launching Safari
+11:58:56.528 INFO - Waiting for SafariDriver to connect
+11:58:57.580 INFO - Connection opened
+11:58:57.582 INFO - Driver connected in 1053 ms
+11:58:57.636 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Err, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+11:58:57.666 INFO - Executing: [delete session: 7ae81663-0eb7-4142-861d-18d2c795f8cf])
+11:58:57.667 INFO - Shutting down
+11:58:57.667 INFO - Closing connection
+11:58:57.667 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Err2, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+11:58:57.668 INFO - Stopping Safari
+11:58:57.670 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Err2, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+11:58:57.685 INFO - Server started on port 27180
+11:58:57.687 INFO - Launching Safari
+11:58:57.687 INFO - Waiting for SafariDriver to connect
+11:58:57.724 INFO - Stopping server
+11:58:57.724 INFO - Stopping server
+11:58:57.729 INFO - Shutdown complete
+11:58:57.729 INFO - Done: [delete session: 7ae81663-0eb7-4142-861d-18d2c795f8cf]
+11:58:58.468 INFO - Connection opened
+11:58:58.468 INFO - Driver connected in 781 ms
+11:58:58.472 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Err2, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+11:58:58.480 INFO - Executing: [delete session: 3c294176-96d1-4600-adc1-419074faa44e])
+11:58:58.480 INFO - Shutting down
+11:58:58.480 INFO - Closing connection
+11:58:58.480 INFO - Stopping Safari
+11:58:58.533 INFO - Stopping server
+11:58:58.533 INFO - Stopping server
+11:58:58.534 INFO - Shutdown complete
+11:58:58.534 INFO - Done: [delete session: 3c294176-96d1-4600-adc1-419074faa44e]

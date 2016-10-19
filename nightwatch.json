@@ -1,24 +1,15 @@
 {
-  "--src_folders" : ["tests/global"],
   "-src_folders" : ["testsA", "testsB"],
-  "src_folders" : ["tests/errors"],
-  "output_folder" : "reports",
+  "src_folders" : ["tests/end"],
+  "output_folder" : false,
+  "output" : true,
   "custom_commands_path" : "custom_commands",
   "custom_assertions_path" : "custom_asserts",
   "page_objects_path" : "page_objects",
   "globals_path" : "Global.js",
+  
+  "disable_colors" : true,
 
-  "selenium-BAK" : {
-    "start_process" : false,
-    "server_path" : "",
-    "log_path" : "",
-    "host" : "127.0.0.1",
-    "port" : 4444,
-    "cli_args" : {
-      "webdriver.chrome.driver" : "",
-      "webdriver.ie.driver" : ""
-    }
-  },
   "selenium": {
       "start_process": true,
       "server_path": "lib/selenium-server-standalone-2.52.0.jar",
@@ -40,23 +31,10 @@
 
   "test_settings" : {
 
-    "default_BAK" : {
-      "launch_url" : "http://localhost",
-      "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
-      "silent": true,
-      "screenshots" : {
-        "enabled" : false,
-        "path" : ""
-      },
-      "desiredCapabilities": {
-        "browserName": "firefox",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
-      }
-    },
-
     "default": {
+      
+      "-skip_testcases_on_fail": false,
+
       "desiredCapabilities": {
           "browserName": "safari",
           "javascriptEnabled": true,

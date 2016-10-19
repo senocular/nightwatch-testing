@@ -1,0 +1,48 @@
+06:17:21.751 INFO - Launching a standalone Selenium Server
+06:17:21.777 INFO - Java: Oracle Corporation 25.92-b14
+06:17:21.777 INFO - OS: Mac OS X 10.11.6 x86_64
+06:17:21.785 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+06:17:21.833 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+06:17:21.833 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+06:17:21.833 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+06:17:21.834 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+06:17:21.898 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+06:17:21.898 INFO - Selenium Server is up and running
+06:17:22.110 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+06:17:22.118 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+06:17:22.171 INFO - Server started on port 15874
+06:17:22.178 INFO - Launching Safari
+06:17:22.186 INFO - Waiting for SafariDriver to connect
+06:17:22.887 INFO - Connection opened
+06:17:22.888 INFO - Driver connected in 702 ms
+06:17:22.926 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+06:17:22.939 INFO - Executing: [get: http://127.0.0.1:8080/index.html])
+06:17:23.027 INFO - Done: [get: http://127.0.0.1:8080/index.html]
+06:17:23.035 INFO - Executing: [find elements: By.cssSelector: body])
+06:17:23.059 INFO - Done: [find elements: By.cssSelector: body]
+06:17:23.062 INFO - Executing: [is displayed: 0 [[SafariDriver: safari on MAC (null)] -> css selector: body]])
+06:17:23.068 INFO - Done: [is displayed: 0 [[SafariDriver: safari on MAC (null)] -> css selector: body]]
+06:17:23.072 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:23.076 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:23.585 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:23.592 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:24.101 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:24.106 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:24.613 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:24.619 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:25.128 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:25.133 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:25.637 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:25.642 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:26.146 INFO - Executing: [find elements: By.cssSelector: h1])
+06:17:26.151 INFO - Done: [find elements: By.cssSelector: h1]
+06:17:26.157 INFO - Executing: [delete session: 4c8fba92-5afb-420c-80d2-2669b9f14f89])
+06:17:26.158 INFO - Shutting down
+06:17:26.158 INFO - Closing connection
+06:17:26.158 INFO - Stopping Safari
+06:17:26.212 INFO - Stopping server
+06:17:26.212 INFO - Stopping server
+06:17:26.218 INFO - Shutdown complete
+06:17:26.218 INFO - Done: [delete session: 4c8fba92-5afb-420c-80d2-2669b9f14f89]

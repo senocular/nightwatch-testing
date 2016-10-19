@@ -1,4 +1,4 @@
-exports.assertion = function(expected) {
+function AssErt(expected) {
 
   /**
    * The message which will be used in the test output and
@@ -48,6 +48,8 @@ exports.assertion = function(expected) {
    */
   this.command = function(callback) {
 
+    console.log('Foo exists?', this.foo)
+
 
     //this.api.pause(1, callback); // OK
     
@@ -60,4 +62,10 @@ exports.assertion = function(expected) {
     return null; // used in queue return when checks for instanceof EventEmitter
   };
 
+}
+
+AssErt.prototype.foo = function() {
+  console.log('Foooooooooooooooooooooo');
 };
+
+exports.assertion = AssErt;

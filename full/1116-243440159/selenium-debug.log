@@ -1,0 +1,42 @@
+13:00:09.306 INFO - Launching a standalone Selenium Server
+13:00:09.335 INFO - Java: Oracle Corporation 25.92-b14
+13:00:09.335 INFO - OS: Mac OS X 10.11.6 x86_64
+13:00:09.343 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+13:00:09.392 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+13:00:09.392 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+13:00:09.392 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:00:09.393 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+13:00:09.451 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+13:00:09.451 INFO - Selenium Server is up and running
+13:00:09.684 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+13:00:09.692 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+13:00:09.741 INFO - Server started on port 22099
+13:00:09.748 INFO - Launching Safari
+13:00:09.756 INFO - Waiting for SafariDriver to connect
+13:00:10.465 INFO - Connection opened
+13:00:10.467 INFO - Driver connected in 710 ms
+13:00:10.515 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Test, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+13:00:10.528 INFO - Executing: [get: http://127.0.0.1:8080])
+13:00:10.587 INFO - Done: [get: http://127.0.0.1:8080]
+13:00:10.597 INFO - Executing: [find element: By.cssSelector: .product2])
+13:00:10.615 INFO - Done: [find element: By.cssSelector: .product2]
+13:00:10.619 INFO - Executing: [find child element: 0 [[SafariDriver: safari on MAC (null)] -> css selector: .product2], By.cssSelector: .something])
+13:00:10.625 INFO - Done: [find child element: 0 [[SafariDriver: safari on MAC (null)] -> css selector: .product2], By.cssSelector: .something]
+13:00:10.628 INFO - Executing: [get text: 1 [[[[SafariDriver: safari on MAC (null)] -> css selector: .product2]] -> css selector: .something]])
+13:00:10.634 INFO - Done: [get text: 1 [[[[SafariDriver: safari on MAC (null)] -> css selector: .product2]] -> css selector: .something]]
+13:00:10.639 INFO - Executing: [find element: By.cssSelector: .product[data-product-name="milk"]])
+13:00:10.643 INFO - Done: [find element: By.cssSelector: .product[data-product-name="milk"]]
+13:00:10.646 INFO - Executing: [find child element: 2 [[SafariDriver: safari on MAC (null)] -> css selector: .product[data-product-name="milk"]], By.cssSelector: .something])
+13:00:10.650 INFO - Done: [find child element: 2 [[SafariDriver: safari on MAC (null)] -> css selector: .product[data-product-name="milk"]], By.cssSelector: .something]
+13:00:10.652 INFO - Executing: [get text: 3 [[[[SafariDriver: safari on MAC (null)] -> css selector: .product[data-product-name="milk"]]] -> css selector: .something]])
+13:00:10.658 INFO - Done: [get text: 3 [[[[SafariDriver: safari on MAC (null)] -> css selector: .product[data-product-name="milk"]]] -> css selector: .something]]
+13:00:10.664 INFO - Executing: [delete session: 1492e64c-e483-4224-9d00-4764c5d95f18])
+13:00:10.664 INFO - Shutting down
+13:00:10.664 INFO - Closing connection
+13:00:10.665 INFO - Stopping Safari
+13:00:10.719 INFO - Stopping server
+13:00:10.719 INFO - Stopping server
+13:00:10.725 INFO - Shutdown complete
+13:00:10.726 INFO - Done: [delete session: 1492e64c-e483-4224-9d00-4764c5d95f18]

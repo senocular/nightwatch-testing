@@ -1,0 +1,19 @@
+11:59:08.284 INFO - Launching a standalone Selenium Server
+11:59:08.309 INFO - Java: Oracle Corporation 25.92-b14
+11:59:08.309 INFO - OS: Mac OS X 10.11.6 x86_64
+11:59:08.317 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+11:59:08.369 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+11:59:08.369 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+11:59:08.370 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+11:59:08.370 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+11:59:08.425 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+11:59:08.425 INFO - Selenium Server is up and running
+11:59:08.644 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Suitefile, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+11:59:08.652 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Suitefile, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 19506
+Only local connections are allowed.
+11:59:09.535 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Suitefile, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+11:59:09.553 INFO - Executing: [delete session: cee44965-7f79-40e5-9eaf-9bedfee5f10b])
+11:59:09.624 INFO - Done: [delete session: cee44965-7f79-40e5-9eaf-9bedfee5f10b]

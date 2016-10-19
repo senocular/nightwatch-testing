@@ -1,32 +1,44 @@
-05:59:23.346 INFO - Launching a standalone Selenium Server
-Setting system property webdriver.chrome.driver to lib/chromedriver
-Setting system property webdriver.ie.driver to lib/IEDriverServer_x64_2.52.2.exe
-Setting system property webdriver.safari.driver to lib/SafariDriver.safariextz
-Setting system property trustAllSSLCertificates to true
-05:59:23.373 INFO - Java: Oracle Corporation 25.92-b14
-05:59:23.374 INFO - OS: Mac OS X 10.11.5 x86_64
-05:59:23.380 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
-05:59:23.430 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+16:55:05.592 INFO - Launching a standalone Selenium Server
+16:55:05.640 INFO - Java: Oracle Corporation 25.92-b14
+16:55:05.641 INFO - OS: Mac OS X 10.11.6 x86_64
+16:55:05.661 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+16:55:05.735 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
 registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
-05:59:23.430 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+16:55:05.735 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
 registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
-05:59:23.430 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-05:59:23.431 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-05:59:23.488 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-05:59:23.488 INFO - Selenium Server is up and running
-05:59:23.723 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Page Object, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
-05:59:23.731 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Page Object, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
-05:59:23.782 INFO - Server started on port 31029
-05:59:23.789 INFO - Launching Safari
-05:59:23.797 INFO - Waiting for SafariDriver to connect
-05:59:24.739 INFO - Connection opened
-05:59:24.741 INFO - Driver connected in 943 ms
-05:59:24.779 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Page Object, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
-05:59:24.794 INFO - Executing: [delete session: a48c2b26-8cf6-41f0-bcfc-b4aa0396429b])
-05:59:24.795 INFO - Shutting down
-05:59:24.795 INFO - Closing connection
-05:59:24.796 INFO - Stopping Safari
-05:59:24.848 INFO - Stopping server
-05:59:24.848 INFO - Stopping server
-05:59:24.852 INFO - Shutdown complete
-05:59:24.852 INFO - Done: [delete session: a48c2b26-8cf6-41f0-bcfc-b4aa0396429b]
+16:55:05.735 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+16:55:05.735 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+16:55:05.861 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+16:55:05.861 INFO - Selenium Server is up and running
+16:55:06.203 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Assert In Places, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+16:55:06.221 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Assert In Places, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+16:55:06.311 INFO - Server started on port 28171
+16:55:06.323 INFO - Launching Safari
+16:55:06.334 INFO - Waiting for SafariDriver to connect
+16:55:07.134 INFO - Connection opened
+16:55:07.136 INFO - Driver connected in 802 ms
+16:55:07.190 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Assert In Places, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+16:55:07.207 INFO - Executing: [delete session: ebd256a3-7801-430f-b478-3e767e9c9fe7])
+16:55:07.207 INFO - Shutting down
+16:55:07.207 INFO - Closing connection
+16:55:07.208 INFO - Stopping Safari
+16:55:07.261 INFO - Stopping server
+16:55:07.262 INFO - Stopping server
+16:55:07.266 INFO - Shutdown complete
+16:55:07.266 INFO - Done: [delete session: ebd256a3-7801-430f-b478-3e767e9c9fe7]
+16:55:07.275 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Assert In Places, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+16:55:07.284 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Assert In Places, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+16:55:07.287 INFO - Server started on port 20380
+16:55:07.288 INFO - Launching Safari
+16:55:07.289 INFO - Waiting for SafariDriver to connect
+16:55:07.878 INFO - Connection opened
+16:55:07.878 INFO - Driver connected in 589 ms
+16:55:07.883 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Assert In Places, browserName=safari, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
+16:55:07.888 INFO - Executing: [delete session: 434ad3e0-f30e-4677-847e-e121848bd44d])
+16:55:07.888 INFO - Shutting down
+16:55:07.888 INFO - Closing connection
+16:55:07.888 INFO - Stopping Safari
+16:55:07.942 INFO - Stopping server
+16:55:07.942 INFO - Stopping server
+16:55:07.943 INFO - Shutdown complete
+16:55:07.943 INFO - Done: [delete session: 434ad3e0-f30e-4677-847e-e121848bd44d]

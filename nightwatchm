@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+require('../nightwatch_master/bin/runner.js');

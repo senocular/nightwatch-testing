@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
+<script>
+setTimeout(function () {
+    $('h1').remove();
+}, 1000);
+
+setTimeout(function () {
+    $('<h1>Test</h1>').appendTo('body');
+}, 2000);
+</script>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+
+</body>
+</html>

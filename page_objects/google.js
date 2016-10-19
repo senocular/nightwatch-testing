@@ -11,7 +11,14 @@ module.exports = {
   url: function () {
       return 'http://google.com'
   },
-  commands: [googleCommands],
+  commands: [googleCommands,
+  {
+    testNavigate: function () {
+      this.navigate();
+      this.api.pause(500);
+      console.log('done');
+    }
+  }],
   elements: {
     searchBar: {
       selector: 'input[type=text]'

@@ -6,7 +6,7 @@ module.exports = {
         hooks: ['before', 'beforeEach', 'afterEach', 'after'],
         errors: ['timeout', 'throw', 'throw-async', 'done-throw', 'done-throw-async'],
         test: {
-            location: 'global',
+            location: '-global',
             hook: 'beforeEach',
             error: 'throw-async',
             logging: true,

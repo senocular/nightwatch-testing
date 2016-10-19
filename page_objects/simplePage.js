@@ -1,6 +1,10 @@
 module.exports = {
     elements: {
-        body: 'body'
+        body: 'body',
+        child: {
+            selector: 'child',
+            locateStrategy: 'id'
+        }
     },
     commands: [
         {

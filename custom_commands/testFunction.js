@@ -2,7 +2,9 @@ var util = require('util');
 var EventEmitter = require('events').EventEmitter;
 
 exports.command = function () {
-  console.log('Custom command function', !!this.pause);
+  console.log('Custom command function: this.pause', !!this.pause);
+  console.log('Custom command function: this.client.pause', this.client && !!this.client.pause);
+  console.log('Custom command function: this.api.pause', this.api && !!this.api.pause);
 
   // this.assert.ok(true, 'end function'); // NOPE
   // this.assert.elementPresent("body"); // OK

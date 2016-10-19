@@ -1,12 +1,14 @@
 module.exports = {
-  '@disabled': false,
-  
-  'first': function (browser) {
-    console.log('first');
-  },
 
-  'second': function (browser) {
-    console.log('second');
+  'test': function (browser) {
+    browser
+    .perform(function(){
+      console.log('URL Started...')
+    })
+    .url('http://senocular.com/test/sleep.php')
+    .perform(function(){
+      console.log('URL Loaded!')
+    })
   },
 
   after: function (browser) {

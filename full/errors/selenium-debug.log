@@ -1,0 +1,17 @@
+03:18:40.749 INFO - Launching a standalone Selenium Server
+03:18:40.777 INFO - Java: Oracle Corporation 25.92-b14
+03:18:40.777 INFO - OS: Mac OS X 10.11.6 x86_64
+03:18:40.785 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+03:18:40.838 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+03:18:40.838 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+03:18:40.838 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+03:18:40.838 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+03:18:40.909 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+03:18:40.909 INFO - Selenium Server is up and running
+03:18:41.141 INFO - Executing: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Single / Throwaway, browserName=chrome, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]])
+03:18:41.149 INFO - Creating a new session for Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Single / Throwaway, browserName=chrome, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]
+Starting ChromeDriver 2.24.417412 (ac882d3ce7c0d99292439bf3405780058fcca0a6) on port 19226
+Only local connections are allowed.
+03:18:42.323 INFO - Done: [new session: Capabilities [{ensureCleanSession=true, acceptSslCerts=true, name=Single / Throwaway, browserName=chrome, safari.options={ensureCleanSession=true, useCleanSession=true}, javascriptEnabled=true, cleanSession=true, platform=ANY, unexpectedAlertBehaviour=dismiss}]]
